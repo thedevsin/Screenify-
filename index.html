@@ -1,110 +1,61 @@
-DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Screenify</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0d0d0d;
-      color: #f1f1f1;
-    }
+<!-- Add this just before the closing </body> tag -->
+<style>
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #121212;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #333;
+    z-index: 1000;
+  }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 32px;
-      background-color: #111;
-      border-bottom: 1px solid #333;
-    }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #aaa;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
 
-    .logo {
-      color: #ffd700;
-      font-size: 24px;
-      font-weight: bold;
-    }
+  .nav-item:hover,
+  .nav-item.active {
+    color: #fff;
+  }
 
-    nav a {
-      margin: 0 12px;
-      color: #ccc;
-      text-decoration: none;
-    }
+  .nav-item i {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+</style>
 
-    nav a:hover {
-      color: #fff;
-    }
+<!-- Font Awesome for icons (use CDN only if not already using it) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    .search {
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: none;
-    }
-
-    main {
-      padding: 24px;
-    }
-
-    h2 {
-      color: #ffd700;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background-color: #1a1a1a;
-      padding: 12px;
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .card h3 {
-      margin-top: 8px;
-      font-size: 18px;
-    }
-
-    .card p {
-      font-size: 14px;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="logo">MOVIES</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Movies</a>
-      <a href="#">TV</a>
-    </nav>
-    <input class="search" type="text" placeholder="Search...">
-  </header>
-
-  <main>
-    <h2>Popular Movies</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://image.tmdb.org/t/p/w500/A0xW7GgeFQoQRaLS2IYSYZ1Nw1Z.jpg" alt="Dune">
-        <h3>Dune</h3>
-        <p>2021 • Adventure, Drama</p>
-      </div>
-      <div class="card">
-        <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Dark Knight">
-        <h3>The Dark Knight</h3>
-        <p>2008 • Action, Crime, Drama</p>
-      </div>
-      <div
+<div class="bottom-nav">
+  <a href="#home" class="nav-item active">
+    <i class="fas fa-home"></i>
+    Home
+  </a>
+  <a href="#search" class="nav-item">
+    <i class="fas fa-search"></i>
+    Search
+  </a>
+  <a href="#hearts" class="nav-item">
+    <i class="fas fa-heart"></i>
+    Hearts
+  </a>
+  <a href="#downloads" class="nav-item">
+    <i class="fas fa-download"></i>
+    Downloads
+  </a>
+  <a href="#me" class="nav-item">
+    <i class="fas fa-user"></i>
+    Me
+  </a>
+</div>
