@@ -1,73 +1,143 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Screenify</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0c0c0c;
-      color: #f5f5dc;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d0d0d;
+      color: #f5f5f5;
     }
+
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.5rem 2rem;
+      padding: 1rem 2rem;
       background-color: #1a1a1a;
-      border-bottom: 1px solid #333;
     }
+
     header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.8rem;
-      margin: 0;
-      color: #f5f5dc;
+      font-size: 1.5rem;
+      color: #f0c040;
     }
+
     nav a {
       margin-left: 2rem;
       text-decoration: none;
-      color: #f5f5dc;
-      font-weight: 500;
+      color: #ccc;
     }
+
     nav a:hover {
-      text-decoration: underline;
+      color: #f0c040;
     }
-    .search-box {
-      background-color: transparent;
-      border: 1px solid #f5f5dc;
-      padding: 0.4rem 0.8rem;
-      border-radius: 4px;
-      color: #f5f5dc;
+
+    .section-title {
+      font-size: 1.3rem;
+      margin: 1rem 2rem;
+      color: #f0c040;
     }
-    .section {
-      padding: 2rem;
-    }
-    .section h2 {
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-      color: #f5f5dc;
-    }
-    .movies-grid {
+
+    .movies-container, .types-container {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      padding: 0 2rem 2rem;
     }
-    .movie-card {
+
+    .movie, .type {
       background-color: #1a1a1a;
-      border-radius: 10px;
+      border-radius: 12px;
       overflow: hidden;
+      transition: 0.3s ease;
     }
-    .movie-card img {
+
+    .movie:hover, .type:hover {
+      transform: scale(1.03);
+    }
+
+    .movie img, .type img {
       width: 100%;
-      height: auto;
-      border-bottom: 1px solid #333;
+      height: 200px;
+      object-fit: cover;
     }
-    .movie-card .info {
-      padding: 0.8rem;
+
+    .movie-info, .type-info {
+      padding: 0.7rem;
     }
-    .movie-card .title {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 
+
+    .movie-info h3, .type-info h4 {
+      margin: 0.3rem 0;
+    }
+
+    .movie-info p, .type-info p {
+      font-size: 0.8rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MOVIES</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Movies</a>
+      <a href="#">TV Shows</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2 class="section-title">Popular Movies</h2>
+    <div class="movies-container">
+      <div class="movie">
+        <img src="https://image.tmdb.org/t/p/w500/dune.jpg" alt="Dune">
+        <div class="movie-info">
+          <h3>Dune</h3>
+          <p>2021 · Adventure, Drama</p>
+        </div>
+      </div>
+      <div class="movie">
+        <img src="https://image.tmdb.org/t/p/w500/dark-knight.jpg" alt="Dark Knight">
+        <div class="movie-info">
+          <h3>The Dark Knight</h3>
+          <p>2008 · Action, Crime, Drama</p>
+        </div>
+      </div>
+      <div class="movie">
+        <img src="https://image.tmdb.org/t/p/w500/titanic.jpg" alt="Titanic">
+        <div class="movie-info">
+          <h3>Titanic</h3>
+          <p>1997 · Drama, Romance</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">All Types</h2>
+    <div class="types-container">
+      <div class="type">
+        <img src="https://image.tmdb.org/t/p/w500/action.jpg" alt="Action">
+        <div class="type-info"><h4>Action</h4></div>
+      </div>
+      <div class="type">
+        <img src="https://image.tmdb.org/t/p/w500/drama.jpg" alt="Drama">
+        <div class="type-info"><h4>Drama</h4></div>
+      </div>
+      <div class="type">
+        <img src="https://image.tmdb.org/t/p/w500/comedy.jpg" alt="Comedy">
+        <div class="type-info"><h4>Comedy</h4></div>
+      </div>
+      <div class="type">
+        <img src="https://image.tmdb.org/t/p/w500/fantasy.jpg" alt="Fantasy">
+        <div class="type-info"><h4>Fantasy</h4></div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
