@@ -116,4 +116,132 @@
     </div>
   </div>
 </body>
-</html>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenify</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: white;
+    }
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #111;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      display: none;
+    }
+    section.active {
+      display: block;
+    }
+    .movie {
+      margin-bottom: 20px;
+    }
+    .movie img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .movie p {
+      margin: 5px 0;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>🎬 Screenify</header>
+
+<section id="home" class="active">
+  <h2>Trending Movies</h2>
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg" alt="John Wick">
+    <p><strong>John Wick</strong></p>
+    <p>Action | 2023 | IMDb: 8.5</p>
+  </div>
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg" alt="Avatar">
+    <p><strong>Avatar 2</strong></p>
+    <p>Sci-Fi | 2022 | IMDb: 7.8</p>
+  </div>
+</section>
+
+<section id="search">
+  <h2>Search Results</h2>
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg" alt="Black Panther">
+    <p><strong>Black Panther</strong></p>
+    <p>Action | 2022 | IMDb: 7.0</p>
+  </div>
+  <div class="movie">
+    <img src="https://image.tmdb.org/t/p/w500/hyzQFNB9z2ZV1wdIgb9tFqvlN1W.jpg" alt="Iron Man">
+    <p><strong>Iron Man</strong></p>
+    <p>Action | 2008 | IMDb: 7.9</p>
+  </div>
+</section>
+
+<section id="hearts">
+  <h2>❤️ Old 70s Hit Movies</h2>
+  <div class="movie">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/00/Sholay_poster.jpg" alt="Sholay">
+    <p><strong>Sholay</strong></p>
+    <p>Action | 1975 | IMDb: 9.0</p>
+  </div>
+</section>
+
+<section id="download">
+  <h2>Download Section</h2>
+  <a class="button" href="#" onclick="showTab('home')">Go to Home</a>
+</section>
+
+<section id="me">
+  <h2>Refer & Earn</h2>
+  <p>Share this website with 5 friends to unlock bonus content!</p>
+  <ul>
+    <li>✅ Friend 1</li>
+    <li>✅ Friend 2</li>
+    <li>⏳ Friend 3</li>
+    <li>⏳ Friend 4</li>
+    <li>⏳ Friend 5</li>
+  </ul>
+</section>
+
+<nav>
+  <a href="#" onclick="showTab('home')">🏠 Home</a>
+  <a href="#" onclick="showTab('search')">🔍 Search</a>
+  <a href="#" onclick="showTab('hearts')">❤️ Hearts</a>
+  <a href="#" onclick="showTab('download')">⬇️ Download</a>
+  <a href="#" onclick="showTab('me')">👤 Me</a>
+</nav>
