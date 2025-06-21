@@ -58,4 +58,62 @@
     <i class="fas fa-user"></i>
     Me
   </a>
-</div>
+</div><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Screenify - Home</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: white;
+      font-family: Arial;
+    }
+    header {
+      background-color: #111;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+    .movie {
+      background: #222;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .movie img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <header>🎬 Screenify - Trending Movies</header>
+  <div class="movies">
+    <div class="movie">
+      <img src="https://image.tmdb.org/t/p/w500/qW4crfED8mpNDadSmMdi7ZDzhXF.jpg" alt="Movie 1">
+      <p><b>Furiosa</b><br>Action | 2024<br>⭐ 7.8 IMDb</p>
+    </div>
+    <div class="movie">
+      <img src="https://image.tmdb.org/t/p/w500/pQYHouPsDw32FhDLr7E3jmw0WTk.jpg" alt="Movie 2">
+      <p><b>Inside Out 2</b><br>Animation | 2024<br>⭐ 8.2 IMDb</p>
+    </div>
+    <div class="movie">
+      <img src="https://image.tmdb.org/t/p/w500/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="Movie 3">
+      <p><b>Bad Boys 4</b><br>Comedy | 2024<br>⭐ 7.0 IMDb</p>
+    </div>
+    <div class="movie">
+      <img src="https://image.tmdb.org/t/p/w500/eFw5YSorHidsajLTayo1noueixW.jpg" alt="Movie 4">
+      <p><b>Kung Fu Panda 4</b><br>Animation | 2024<br>⭐ 7.5 IMDb</p>
+    </div>
+  </div>
+</body>
+</html>
