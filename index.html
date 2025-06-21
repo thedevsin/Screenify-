@@ -1,27 +1,73 @@
-<section class="trending">
-  <h2>🔥 Trending Now</h2>
-
-  <div class="movie">
-    <img src="https://m.media-amazon.com/images/I/81MZQBZMeJL._AC_SY679_.jpg" alt="Inception Poster" />
-    <div class="info">
-      <h3>Inception</h3>
-      <p>Category: Sci-Fi</p>
-    </div>
-  </div>
-
-  <div class="movie">
-    <img src="https://m.media-amazon.com/images/I/91KkWf50SoL._AC_SY679_.jpg" alt="Avengers Poster" />
-    <div class="info">
-      <h3>Avengers: Endgame</h3>
-      <p>Category: Action</p>
-    </div>
-  </div>
-
-  <div class="movie">
-    <img src="https://m.media-amazon.com/images/I/81niPI0Tn7L._AC_SY679_.jpg" alt="The Batman Poster" />
-    <div class="info">
-      <h3>The Batman</h3>
-      <p>Category: Thriller</p>
-    </div>
-  </div>
-</section>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screenify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #0c0c0c;
+      color: #f5f5dc;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      margin: 0;
+      color: #f5f5dc;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: #f5f5dc;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .search-box {
+      background-color: transparent;
+      border: 1px solid #f5f5dc;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      color: #f5f5dc;
+    }
+    .section {
+      padding: 2rem;
+    }
+    .section h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #f5f5dc;
+    }
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 1.5rem;
+    }
+    .movie-card {
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .movie-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #333;
+    }
+    .movie-card .info {
+      padding: 0.8rem;
+    }
+    .movie-card .title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 
