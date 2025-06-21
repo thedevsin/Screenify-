@@ -1,122 +1,4 @@
-<!-- Add this just before the closing </body> tag -->
-<style>
-  .bottom-nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: #121212;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #333;
-    z-index: 1000;
-  }
-
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #aaa;
-    font-size: 12px;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-
-  .nav-item:hover,
-  .nav-item.active {
-    color: #fff;
-  }
-
-  .nav-item i {
-    font-size: 20px;
-    margin-bottom: 4px;
-  }
-</style>
-
-<!-- Font Awesome for icons (use CDN only if not already using it) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<div class="bottom-nav">
-  <a href="#home" class="nav-item active">
-    <i class="fas fa-home"></i>
-    Home
-  </a>
-  <a href="#search" class="nav-item">
-    <i class="fas fa-search"></i>
-    Search
-  </a>
-  <a href="#hearts" class="nav-item">
-    <i class="fas fa-heart"></i>
-    Hearts
-  </a>
-  <a href="#downloads" class="nav-item">
-    <i class="fas fa-download"></i>
-    Downloads
-  </a>
-  <a href="#me" class="nav-item">
-    <i class="fas fa-user"></i>
-    Me
-  </a>
-</div><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Screenify - Home</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #000;
-      color: white;
-      font-family: Arial;
-    }
-    header {
-      background-color: #111;
-      padding: 10px 20px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .movies {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 15px;
-      padding: 20px;
-    }
-    .movie {
-      background: #222;
-      padding: 10px;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .movie img {
-      width: 100%;
-      border-radius: 8px;
-    }
-  </style>
-</head>
-<body>
-  <header>🎬 Screenify - Trending Movies</header>
-  <div class="movies">
-    <div class="movie">
-      <img src="https://image.tmdb.org/t/p/w500/qW4crfED8mpNDadSmMdi7ZDzhXF.jpg" alt="Movie 1">
-      <p><b>Furiosa</b><br>Action | 2024<br>⭐ 7.8 IMDb</p>
-    </div>
-    <div class="movie">
-      <img src="https://image.tmdb.org/t/p/w500/pQYHouPsDw32FhDLr7E3jmw0WTk.jpg" alt="Movie 2">
-      <p><b>Inside Out 2</b><br>Animation | 2024<br>⭐ 8.2 IMDb</p>
-    </div>
-    <div class="movie">
-      <img src="https://image.tmdb.org/t/p/w500/bXi6IQiQDHD00JFio5ZSZOeRSBh.jpg" alt="Movie 3">
-      <p><b>Bad Boys 4</b><br>Comedy | 2024<br>⭐ 7.0 IMDb</p>
-    </div>
-    <div class="movie">
-      <img src="https://image.tmdb.org/t/p/w500/eFw5YSorHidsajLTayo1noueixW.jpg" alt="Movie 4">
-      <p><b>Kung Fu Panda 4</b><br>Animation | 2024<br>⭐ 7.5 IMDb</p>
-    </div>
-  </div>
-</body>
-</html><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -245,3 +127,102 @@
   <a href="#" onclick="showTab('download')">⬇️ Download</a>
   <a href="#" onclick="showTab('me')">👤 Me</a>
 </nav>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Screenify - Search</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f0f;
+      color: white;
+    }
+    header {
+      padding: 20px;
+      background-color: #1f1f1f;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .search-box {
+      display: flex;
+      justify-content: center;
+    }
+    .search-box input {
+      width: 90%;
+      padding: 10px;
+      border-radius: 25px;
+      border: none;
+      font-size: 16px;
+      background-color: #2c2c2c;
+      color: white;
+    }
+    .trending-section {
+      padding: 20px;
+    }
+    .trending-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #e50914;
+    }
+    .movies {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+    .movie-card {
+      background-color: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hearts - 70s Classics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .movie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 15px;
+    }
+
+    .movie-card {
+      background-color: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width
